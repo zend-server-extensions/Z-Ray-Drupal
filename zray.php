@@ -1,5 +1,8 @@
 <?php
-
+/*********************************
+	Drupal Z-Ray Extension
+	Version: 1.00
+**********************************/
 $drupalExt = new ZRayExtensionDrupal();
 $zre = new \ZRayExtension('drupal');
 
