@@ -42,7 +42,7 @@ class ZRayExtensionDrupal {
 		$parameter = isset($context['functionArgs'][1]) ? $context['functionArgs'][1] : '';
 		$blob = isset($context['functionArgs'][2]) ? json_encode($context['functionArgs'][2]) : '';
 		
-		if (! $this->is_closure($called) && ! $this->is_closure($parameter) && ! $this->is_closure($blob)) {
+		if (! $this->is_closure($called) && ! $this->is_closure($parameter) && ! $this->is_closure($blob) && ! is_array($called) && ! is_object($called) ) {
 			$storage['CalledFunctions'][$called] = array('called' => $called, 'parameter' => $parameter, 'info' => $blob);
 		}
 	}
